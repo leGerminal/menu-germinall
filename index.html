@@ -1,199 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Le Germinal – Menu</title>
-  <link rel="stylesheet" href="./style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Germinal – Menu</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="topbar">
-    <div class="brand">Le Germinal</div>
 
-    <div class="langswitch">
-      <button class="langbtn active" data-lang="fr">FR</button>
-      <button class="langbtn" data-lang="en">EN</button>
-    </div>
+<div class="topbar">
+  <h1>Le Germinal</h1>
+  <div class="langswitch">
+    <button class="langbtn active" data-lang="fr">FR</button>
+    <button class="langbtn" data-lang="en">EN</button>
   </div>
+</div>
 
-  <h1>
-    <span data-i18n="title">Menu</span>
-  </h1>
+<!-- ================= FOOD ================= -->
 
-  <div class="tabs">
-    <button class="tab active" data-target="food"><span data-i18n="tab_food">Food</span></button>
-    <button class="tab" data-target="drinks"><span data-i18n="tab_drinks">Boissons</span></button>
-    <button class="tab" data-target="wines"><span data-i18n="tab_wines">Vins</span></button>
-  </div>
+<h2 class="section-title">
+  <span class="fr">Entrées</span>
+  <span class="en">Starters</span>
+</h2>
 
-  <!-- FOOD -->
-  <section id="food" class="panel show">
-    <h2><span data-i18n="starters">Entrées</span></h2>
-    <ul class="list">
-      <li class="product" data-price="6 €" data-img="images/oeufs-poches.jpg">
-        <strong>
-          <span class="txt fr">Œufs pochés, purée de patate douce</span>
-          <span class="txt en">Poached eggs, sweet potato purée</span>
-        </strong>
-      </li>
+<ul class="menu-list">
+  <li data-price="6 €"><span class="fr">Œufs poché, purée de patate douce</span><span class="en">Poached eggs, sweet potato purée</span></li>
+  <li data-price="7,5 €"><span class="fr">Terrine du moment, pickles d’oignons rouges</span><span class="en">Homemade terrine, pickled red onions</span></li>
+  <li data-price="8,5 €"><span class="fr">Crumble d’aubergine au parmesan et roquette</span><span class="en">Eggplant crumble with parmesan and arugula</span></li>
+  <li data-price="7,5 €"><span class="fr">Samoussa poulet, pommes de terre et curry</span><span class="en">Chicken samosa with potatoes and curry</span></li>
+  <li data-price="8 €"><span class="fr">Soupe à l’oignon</span><span class="en">French onion soup</span></li>
+  <li data-price="8 €"><span class="fr">Escargots de Bourgogne x6</span><span class="en">Burgundy snails x6</span></li>
+  <li data-price="9,5 €"><span class="fr">Ravioles du Royans à la crème de parmesan</span><span class="en">Ravioli with parmesan cream</span></li>
+</ul>
 
-      <li class="product" data-price="7,50 €" data-img="images/terrine.jpg">
-        <strong>
-          <span class="txt fr">Terrine du moment, pickles d’oignons rouges</span>
-          <span class="txt en">Homemade terrine, pickled red onions</span>
-        </strong>
-      </li>
+<h2 class="section-title">
+  <span class="fr">Plats</span>
+  <span class="en">Main Dishes</span>
+</h2>
 
-      <li class="product" data-price="8 €" data-img="images/soupe-oignon.jpg">
-        <strong>
-          <span class="txt fr">Soupe à l’oignon <span class="icons">🧅 🧀</span></span>
-          <span class="txt en">French onion soup <span class="icons">🧅 🧀</span></span>
-        </strong>
-      </li>
-    </ul>
+<ul class="menu-list">
+  <li data-price="17,5 €"><span class="fr">Pièce du boucher, sauce au poivre vert, frites</span><span class="en">Butcher’s cut, green pepper sauce, fries</span></li>
+  <li data-price="16,5 €"><span class="fr">Bœuf bourguignon, purée</span><span class="en">Beef bourguignon, mashed potatoes</span></li>
+  <li data-price="13,5 €"><span class="fr">Fish and chips</span><span class="en">Fish & chips</span></li>
+  <li data-price="17,5 €"><span class="fr">Burger du point G, frites maison</span><span class="en">Chef’s burger, homemade fries</span></li>
+  <li data-price="17,5 €"><span class="fr">Burger de pulled pork</span><span class="en">Pulled pork burger</span></li>
+  <li data-price="16 €"><span class="fr">Tartare de bœuf traditionnel, frites maison</span><span class="en">Traditional beef tartare, homemade fries</span></li>
+  <li data-price="14,5 €"><span class="fr">Camembert rôti au miel et thym, frites, salade</span><span class="en">Baked camembert with honey, fries, salad</span></li>
+  <li data-price="15,5 €"><span class="fr">Poulet rôti du chef, sauce du chef et frites</span><span class="en">Roast chicken, chef’s sauce, fries</span></li>
+  <li data-price="18,5 €"><span class="fr">Blanquette de veau, riz basmati</span><span class="en">Veal stew, basmati rice</span></li>
+  <li data-price="22,5 €"><span class="fr">Pavé de saumon, ratatouille à la provençale</span><span class="en">Salmon steak with ratatouille</span></li>
+  <li data-price="15,5 €"><span class="fr">Penne à la crème de pecorino et aubergine napolitaine</span><span class="en">Penne with pecorino cream and eggplant</span></li>
+  <li data-price="17 €"><span class="fr">Penne à la crème de truffe, noisettes torréfiées</span><span class="en">Truffle cream penne</span></li>
+  <li data-price="16,5 €"><span class="fr">Risotto aux champignons et poulet croustillant</span><span class="en">Mushroom risotto with crispy chicken</span></li>
+  <li data-price="15,9 €"><span class="fr">Salade César</span><span class="en">Caesar salad</span></li>
+  <li data-price="15,9 €"><span class="fr">Salade de saison, poulet mariné pané au panko</span><span class="en">Seasonal salad with panko chicken</span></li>
+  <li data-price="15,5 €"><span class="fr">Assiette végétarienne</span><span class="en">Vegetarian plate</span></li>
+  <li data-price="4 €"><span class="fr">Garniture — frites / purée / salade</span><span class="en">Side — fries / mash / salad</span></li>
+  <li data-price="6 €"><span class="fr">Garniture ratatouille</span><span class="en">Side ratatouille</span></li>
+</ul>
 
-    <h2><span data-i18n="mains">Plats</span></h2>
-    <ul class="list">
-      <li class="product" data-price="17,50 €" data-img="images/piece-boucher.jpg">
-        <strong>
-          <span class="txt fr">Pièce du boucher, sauce au poivre vert, frites <span class="icons">🥩</span></span>
-          <span class="txt en">Butcher’s cut, green pepper sauce, fries <span class="icons">🥩</span></span>
-        </strong>
-      </li>
+<h2 class="section-title">
+  <span class="fr">Desserts</span>
+  <span class="en">Desserts</span>
+</h2>
 
-      <li class="product" data-price="13,50 €" data-img="images/fish-chips.jpg">
-        <strong>
-          <span class="txt fr">Fish and chips <span class="icons">🐟</span></span>
-          <span class="txt en">Fish & chips <span class="icons">🐟</span></span>
-        </strong>
-      </li>
+<ul class="menu-list">
+  <li data-price="10 €"><span class="fr">Banofee revisité du chef</span><span class="en">Chef’s banoffee</span></li>
+  <li data-price="8,5 €"><span class="fr">Crème brûlée vanille de Madagascar</span><span class="en">Crème brûlée</span></li>
+  <li data-price="8,5 €"><span class="fr">Cheesecake poire et noisettes torréfiées</span><span class="en">Pear & hazelnut cheesecake</span></li>
+  <li data-price="7,5 €"><span class="fr">Crumble du moment</span><span class="en">Crumble of the day</span></li>
+  <li data-price="8,5 €"><span class="fr">Moelleux au chocolat</span><span class="en">Chocolate fondant</span></li>
+  <li data-price="7,5 €"><span class="fr">Dessert du moment</span><span class="en">Dessert of the day</span></li>
+  <li data-price="9,5 €"><span class="fr">Café gourmand</span><span class="en">Coffee gourmet</span></li>
+</ul>
 
-      <li class="product" data-price="22,50 €" data-img="images/saumon-ratatouille.jpg">
-        <strong>
-          <span class="txt fr">Pavé de saumon, ratatouille <span class="icons">🐟</span></span>
-          <span class="txt en">Salmon steak with ratatouille <span class="icons">🐟</span></span>
-        </strong>
-      </li>
-    </ul>
+<h2 class="section-title">
+  <span class="fr">Boissons</span>
+  <span class="en">Drinks</span>
+</h2>
 
-    <h2><span data-i18n="desserts">Desserts</span></h2>
-    <ul class="list">
-      <li class="product" data-price="8,50 €" data-img="images/creme-brulee.jpg">
-        <strong>
-          <span class="txt fr">Crème brûlée</span>
-          <span class="txt en">Crème brûlée</span>
-        </strong>
-      </li>
+<ul class="menu-list">
+  <li data-price="4,5 €"><span class="fr">Coca-cola / Coca zéro 33 cl</span><span class="en">Coca-cola / Coke Zero 33 cl</span></li>
+  <li data-price="5 €"><span class="fr">Ginger beer 25 cl</span><span class="en">Ginger beer 25 cl</span></li>
+  <li data-price="5 €"><span class="fr">Evian plate 50 cl</span><span class="en">Evian still water 50 cl</span></li>
+  <li data-price="2,4 €"><span class="fr">Expresso</span><span class="en">Espresso</span></li>
+  <li data-price="9,5 €"><span class="fr">Cocktails classiques</span><span class="en">Classic cocktails</span></li>
+</ul>
 
-      <li class="product" data-price="9,50 €" data-img="images/cafe-gourmand.jpg">
-        <strong>
-          <span class="txt fr">Café gourmand</span>
-          <span class="txt en">Coffee gourmet</span>
-        </strong>
-      </li>
-    </ul>
-
-    <h2><span data-i18n="legend">Légende</span></h2>
-    <div class="legend">
-      <span>🌱 <span class="txt fr">Végétarien</span><span class="txt en">Vegetarian</span></span>
-      <span>🌶️ <span class="txt fr">Épicé</span><span class="txt en">Spicy</span></span>
-      <span>🐟 <span class="txt fr">Poisson</span><span class="txt en">Fish</span></span>
-      <span>🥩 <span class="txt fr">Viande</span><span class="txt en">Meat</span></span>
-      <span>🧀 <span class="txt fr">Fromage</span><span class="txt en">Cheese</span></span>
-    </div>
-  </section>
-
-  <!-- DRINKS -->
-  <section id="drinks" class="panel">
-    <h2><span class="txt fr">Boissons fraîches</span><span class="txt en">Soft drinks</span></h2>
-    <ul class="list">
-      <li class="product" data-price="4,50 €" data-img="images/coca.jpg">
-        <strong>
-          <span class="txt fr">Coca-cola / Coca zéro (33 cl)</span>
-          <span class="txt en">Coca-cola / Coke Zero (33 cl)</span>
-        </strong>
-      </li>
-
-      <li class="product" data-price="5 €" data-img="images/gingerbeer.jpg">
-        <strong>
-          <span class="txt fr">Ginger beer (25 cl)</span>
-          <span class="txt en">Ginger beer (25 cl)</span>
-        </strong>
-      </li>
-    </ul>
-
-    <h2><span class="txt fr">Boissons chaudes</span><span class="txt en">Hot drinks</span></h2>
-    <ul class="list">
-      <li class="product" data-price="2,40 €" data-img="images/expresso.jpg">
-        <strong>
-          <span class="txt fr">Expresso</span>
-          <span class="txt en">Espresso</span>
-        </strong>
-      </li>
-
-      <li class="product" data-price="4,50 €" data-img="images/the.jpg">
-        <strong>
-          <span class="txt fr">Thé ou infusion</span>
-          <span class="txt en">Tea / infusion</span>
-        </strong>
-      </li>
-    </ul>
-  </section>
-
-  <!-- WINES -->
-  <section id="wines" class="panel">
-    <h2><span class="txt fr">Vins</span><span class="txt en">Wines</span></h2>
-
-    <h3><span class="txt fr">Rouges</span><span class="txt en">Reds</span></h3>
-    <div class="wine-table">
-      <div class="wine-row head">
-        <div><span class="txt fr">Vin</span><span class="txt en">Wine</span></div>
-        <div>15 cl</div><div>46 cl</div><div>75 cl</div>
-      </div>
-      <div class="wine-row">
-        <div><strong>Bordeaux</strong></div><div>5,50 €</div><div>16,50 €</div><div>26 €</div>
-      </div>
-      <div class="wine-row">
-        <div><strong>IGP Pays d’Oc Pinot Noir</strong></div><div>—</div><div>—</div><div>—</div>
-      </div>
-      <div class="wine-row">
-        <div><strong>Bourgueil AOC</strong></div><div>—</div><div>—</div><div>—</div>
-      </div>
-      <div class="wine-row">
-        <div><strong>Saint Nicolas de Bourgueil</strong></div><div>—</div><div>—</div><div>—</div>
-      </div>
-    </div>
-
-    <h3><span class="txt fr">Blancs</span><span class="txt en">Whites</span></h3>
-    <div class="wine-table">
-      <div class="wine-row head">
-        <div><span class="txt fr">Vin</span><span class="txt en">Wine</span></div>
-        <div>15 cl</div><div>46 cl</div><div>75 cl</div>
-      </div>
-      <div class="wine-row"><div><strong>IGP Pays d’Oc Chardonnay</strong></div><div>—</div><div>—</div><div>—</div></div>
-      <div class="wine-row"><div><strong>IGP Pays d’Oc Viognier</strong></div><div>—</div><div>—</div><div>—</div></div>
-      <div class="wine-row"><div><strong>Montagny</strong></div><div>—</div><div>—</div><div>—</div></div>
-    </div>
-
-    <h3><span class="txt fr">Rosés</span><span class="txt en">Rosés</span></h3>
-    <div class="wine-table">
-      <div class="wine-row head">
-        <div><span class="txt fr">Vin</span><span class="txt en">Wine</span></div>
-        <div>15 cl</div><div>46 cl</div><div>75 cl</div>
-      </div>
-      <div class="wine-row"><div><strong>IGP Méditerranée Ponton N7</strong></div><div>—</div><div>—</div><div>—</div></div>
-      <div class="wine-row"><div><strong>Coteaux d’Aix-en-Provence</strong></div><div>—</div><div>—</div><div>—</div></div>
-      <div class="wine-row"><div><strong>Côtes de Provence AOP</strong></div><div>—</div><div>—</div><div>—</div></div>
-    </div>
-  </section>
-
-  <!-- MODAL IMAGE -->
-  <div id="imageModal" class="modal" role="dialog" aria-modal="true" aria-label="Aperçu image" tabindex="-1">
-    <button class="modal-close" onclick="closeModal()" aria-label="Fermer">✕</button>
-    <img id="modalImg" src="" alt="Aperçu" />
-  </div>
-
-  <script src="./script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
