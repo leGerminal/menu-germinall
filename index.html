@@ -8,22 +8,30 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body id="top">
+<body id="top" data-lang="both">
   <header class="top">
-    <div class="brand">
-      <h1>Le Germinal</h1>
-      <p class="subtitle">Carte digitale · Digital menu</p>
+    <div class="top-row">
+      <div class="brand">
+        <h1>Le Germinal</h1>
+        <p class="subtitle">Carte digitale · Digital menu</p>
+      </div>
+
+      <div class="lang-switch" aria-label="Langue / Language">
+        <button type="button" class="lang-btn" data-set-lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-set-lang="both">FR+EN</button>
+      </div>
     </div>
 
     <nav class="tabs" aria-label="Navigation menu">
-      <a href="#carte">Carte</a>
+      <a href="#carte">Menu</a>
       <a href="#entrees">Entrées</a>
       <a href="#plats">Plats</a>
       <a href="#tapas">Tapas</a>
       <a href="#desserts">Desserts</a>
       <a href="#golden">Golden hours</a>
-      <a href="#boissons">Boissons</a>
+      <a href="#softs">Softs</a>
       <a href="#cocktails">Cocktails</a>
+      <a href="#alcools">Apéritifs & alcools</a>
       <a href="#vins">Vins</a>
       <a href="#infos">Infos</a>
     </nav>
@@ -37,12 +45,12 @@
         Entrée + Plat ou Plat + Dessert<br>
         De 12h à 15h du lundi au vendredi, hors jours fériés
       </p>
-      <p class="muted small">
+      <p class="muted small en">
         <em>Lunch meal (12pm to 3pm) — Starter + Main course or Main course + Dessert (Mon–Fri, except public holidays)</em>
       </p>
       <p class="note">
         Au choix sur les suggestions marquées d’une étoile (*)<br>
-        <em>Only on the dishes marked with (*)</em>
+        <span class="en"><em>Only on the dishes marked with (*)</em></span>
       </p>
     </section>
 
@@ -83,10 +91,12 @@
       <article class="item"><div class="left"><h3>Penne à la crème de pecorino et aubergine napolitaine</h3><p class="en">Penne, pecorino cream & Neapolitan eggplant</p></div><div class="right">15,5</div></article>
       <article class="item"><div class="left"><h3>Penne à la crème de truffe, noisettes torréfiées</h3><p class="en">Penne, truffle cream & toasted hazelnuts</p></div><div class="right">17,0</div></article>
       <article class="item"><div class="left"><h3>Risotto aux champignons et poulet croustillant</h3><p class="en">Mushroom risotto & crispy chicken</p></div><div class="right">16,5</div></article>
-      <article class="item"><div class="left"><h3>Salade César</h3><p class="en">Caesar salad</p></div><div class="right">15,9</div></article>
-      <article class="item"><div class="left"><h3>Salade de saison, poulet mariné pané au panko, œuf mimosa, tomate, parmesan, croûtons</h3><p class="en">Seasonal salad, panko chicken, mimosa egg, tomato, parmesan, croutons</p></div><div class="right"></div></article>
-      <article class="item"><div class="left"><h3>Salade Chiva</h3><p class="meta">Salade, tomate, œuf mimosa, samoussa poulet curry</p><p class="en">Salad, tomato, mimosa egg, chicken curry samosa</p></div><div class="right">15,9</div></article>
+
       <article class="item"><div class="left"><h3>Assiette végétarienne</h3><p class="meta">Ratatouille, purée de patate douce et salade verte</p><p class="en">Vegetarian plate: ratatouille, sweet potato mash, green salad</p></div><div class="right">15,5</div></article>
+
+      <article class="item"><div class="left"><h3>Salade César</h3><p class="en">Caesar salad</p></div><div class="right">15,9</div></article>
+      <article class="item"><div class="left"><h3>Salade Chiva</h3><p class="meta">Salade, tomate, œuf mimosa, samoussa poulet curry</p><p class="en">Salad, tomato, mimosa egg, chicken curry samosa</p></div><div class="right">15,9</div></article>
+
       <article class="item"><div class="left"><h3>Garniture — frites / purée / salade / pommes sautées</h3><p class="en">Side — fries / mash / salad / sauté potatoes</p></div><div class="right">4,0</div></article>
       <article class="item"><div class="left"><h3>Garniture — ratatouille</h3><p class="en">Side — ratatouille</p></div><div class="right">6,0</div></article>
     </section>
@@ -147,12 +157,12 @@
       <article class="item"><div class="left"><h3>Cocktails sans alcool</h3><p class="en">Alcohol-free cocktails</p></div><div class="right">5,5</div></article>
     </section>
 
-    <!-- BOISSONS -->
-    <section id="boissons" class="section">
-      <h2>Boissons <span class="en">Drinks</span></h2>
+    <!-- SOFTS + HOT -->
+    <section id="softs" class="section">
+      <h2>Boissons fraîches & chaudes <span class="en">Soft & hot drinks</span></h2>
 
       <h3 class="subhead">Boissons fraîches <span class="en">Soft drinks</span></h3>
-      <article class="item"><div class="left"><h3>Coca‑Cola / Coca‑Zéro 33cl</h3></div><div class="right">4,5</div></article>
+      <article class="item"><div class="left"><h3>Coca-Cola / Coca-Zéro 33cl</h3></div><div class="right">4,5</div></article>
       <article class="item"><div class="left"><h3>Perrier / Schweppes tonic 33cl</h3></div><div class="right">4,5</div></article>
       <article class="item"><div class="left"><h3>Ginger beer 25cl</h3></div><div class="right">5,0</div></article>
       <article class="item"><div class="left"><h3>Orangina 33cl</h3></div><div class="right">4,5</div></article>
@@ -161,12 +171,10 @@
       <article class="item"><div class="left"><h3>Thé glacé maison 46cl</h3><p class="en">Homemade iced tea</p></div><div class="right">5,5</div></article>
       <article class="item"><div class="left"><h3>Café glacé du bistro 46cl</h3><p class="en">Iced coffee</p></div><div class="right">5,5</div></article>
       <article class="item"><div class="left"><h3>Citronnade gingembre 46cl</h3><p class="en">Ginger lemonade</p></div><div class="right">5,5</div></article>
-
       <article class="item"><div class="left"><h3>Supplément sirop</h3><p class="en">Syrup extra</p></div><div class="right">0,3</div></article>
-
-      <article class="item"><div class="left"><h3>Jus de fruit au choix 25cl</h3><p class="meta">Orange, Pomme, Ananas, Canneberge, Tomate</p><p class="en">Fruit juice (orange, apple, pineapple, cranberry, tomato)</p></div><div class="right">4,5</div></article>
-      <article class="item"><div class="left"><h3>Nectar de fruit</h3><p class="meta">Mangue, Abricot</p><p class="en">Fruit nectar (mango, apricot)</p></div><div class="right">4,5</div></article>
-      <article class="item"><div class="left"><h3>Jus de fruits pressés</h3><p class="meta">Orange, Citron</p><p class="en">Freshly squeezed (orange, lemon)</p></div><div class="right">6,0</div></article>
+      <article class="item"><div class="left"><h3>Jus de fruit au choix 25cl</h3><p class="meta">Orange, Pomme, Ananas, Canneberge, Tomate</p><p class="en">Fruit juice</p></div><div class="right">4,5</div></article>
+      <article class="item"><div class="left"><h3>Nectar de fruit</h3><p class="meta">Mangue, Abricot</p><p class="en">Fruit nectar</p></div><div class="right">4,5</div></article>
+      <article class="item"><div class="left"><h3>Jus de fruits pressés</h3><p class="meta">Orange, Citron</p><p class="en">Freshly squeezed</p></div><div class="right">6,0</div></article>
 
       <h3 class="subhead">Eaux minérales <span class="en">Water</span></h3>
       <article class="item"><div class="left"><h3>Evian plate 50cl</h3><p class="en">Still water</p></div><div class="right">5,0</div></article>
@@ -191,41 +199,7 @@
       <article class="item"><div class="left"><h3>Café au lait végétal</h3><p class="en">Coffee with plant-based milk</p></div><div class="right">5,5</div></article>
     </section>
 
-    <!-- COCKTAILS -->
-    <section id="cocktails" class="section">
-      <h2>Carte des cocktails <span class="en">Cocktail list</span></h2>
-
-      <h3 class="subhead">Les Mules 25cl <span class="en">Mules</span> <span class="muted">9,5 €</span></h3>
-      <article class="item"><div class="left"><h3>Moscow Mule</h3><p class="meta">Vodka, Gingerbeer, citron vert, sirop de gingembre maison</p><p class="en">Vodka, ginger beer, lime, homemade ginger syrup</p></div><div class="right">9,5</div></article>
-      <article class="item"><div class="left"><h3>London Mule</h3><p class="meta">Gin, Gingerbeer, citron vert, sirop de gingembre maison</p><p class="en">Gin, ginger beer, lime, homemade ginger syrup</p></div><div class="right">9,5</div></article>
-      <article class="item"><div class="left"><h3>Jamaican Mule</h3><p class="meta">Rhum, Gingerbeer, citron vert, sirop de gingembre maison</p><p class="en">Rum, ginger beer, lime, homemade ginger syrup</p></div><div class="right">9,5</div></article>
-      <article class="item"><div class="left"><h3>Mexican Mule</h3><p class="meta">Tequila, Gingerbeer, citron vert, sirop de gingembre maison</p><p class="en">Tequila, ginger beer, lime, homemade ginger syrup</p></div><div class="right">9,5</div></article>
-
-      <h3 class="subhead">Les Spritz 25cl <span class="en">Spritz</span> <span class="muted">9,5 €</span></h3>
-      <article class="item"><div class="left"><h3>Apérol Spritz</h3><p class="meta">Apérol, Prosecco, Perrier</p><p class="en">Aperol, prosecco, sparkling water</p></div><div class="right">9,5</div></article>
-      <article class="item"><div class="left"><h3>Saint Germain Spritz</h3><p class="meta">Crème de fleur de sureau, Prosecco, Perrier, concombre</p><p class="en">Elderflower liqueur, prosecco, sparkling water, cucumber</p></div><div class="right">9,5</div></article>
-      <article class="item"><div class="left"><h3>Campari Spritz</h3><p class="meta">Campari, Prosecco, Perrier</p></div><div class="right">9,5</div></article>
-      <article class="item"><div class="left"><h3>Manzana Spritz</h3><p class="meta">Manzana, Prosecco, Perrier</p></div><div class="right">9,5</div></article>
-
-      <h3 class="subhead">Les Classiques <span class="en">Classics</span> <span class="muted">9,5 €</span></h3>
-      <article class="item"><div class="left"><h3>Mojito</h3><p class="meta">Rhum, menthe, citron vert, Perrier</p></div><div class="right">9,5</div></article>
-      <article class="item"><div class="left"><h3>Caïpirinha</h3><p class="meta">Citron vert, sucre, cachaça</p></div><div class="right">9,5</div></article>
-      <article class="item"><div class="left"><h3>Sex on the Beach</h3><p class="meta">Crème de pêche, vodka, triple sec, jus d’ananas, jus de cranberries</p></div><div class="right">9,5</div></article>
-      <article class="item"><div class="left"><h3>Le Point G</h3><p class="meta">Vodka, liqueur de café, Baileys</p></div><div class="right">9,5</div></article>
-      <article class="item"><div class="left"><h3>La Madeleine</h3><p class="meta">Amaretto, triple sec, jus d’ananas</p></div><div class="right">9,5</div></article>
-      <article class="item"><div class="left"><h3>Cuba Libre</h3><p class="meta">Rhum, Coca‑Cola, citron vert</p></div><div class="right">9,5</div></article>
-      <article class="item"><div class="left"><h3>Piña Colada</h3><p class="meta">Rhum, jus d’ananas, crème de coco</p></div><div class="right">9,5</div></article>
-      <article class="item"><div class="left"><h3>Tropical ginger</h3><p class="meta">Rhum, jus d’ananas, gingerbeer, sirop passion</p></div><div class="right">9,5</div></article>
-      <article class="item"><div class="left"><h3>Coco twist</h3><p class="meta">Gin, crème de coco, Perrier</p></div><div class="right">9,5</div></article>
-
-      <h3 class="subhead">Sans alcool <span class="en">Alcohol-free</span> <span class="muted">6,0 €</span></h3>
-      <article class="item"><div class="left"><h3>Apple Mojito</h3><p class="meta">Menthe fraîche, citron vert, jus de pomme, Perrier</p></div><div class="right">6,0</div></article>
-      <article class="item"><div class="left"><h3>Le Detox</h3><p class="meta">Sirop de gingembre maison, citron pressé, concombre, Perrier</p></div><div class="right">6,0</div></article>
-      <article class="item"><div class="left"><h3>Cocktails de fruit</h3><p class="meta">Selon l’humeur du barman</p><p class="en">Fruit cocktail — bartender’s choice</p></div><div class="right">6,0</div></article>
-      <article class="item"><div class="left"><h3>Virgin Colada</h3><p class="meta">Jus d’ananas, crème de coco</p></div><div class="right">6,0</div></article>
-    </section>
-
-    <!-- ALCOOLS / BIERES / APERITIFS / DIGESTIFS -->
+    <!-- APERITIFS / BIERES / ALCOOLS / DIGESTIFS -->
     <section id="alcools" class="section">
       <h2>Apéritifs · Bières · Alcools <span class="en">Aperitif · Beer · Spirits</span></h2>
 
@@ -265,31 +239,29 @@
       <article class="item"><div class="left"><h3>Santa Teresa</h3></div><div class="right">12,5</div></article>
     </section>
 
-    <!-- VINS -->
+    <!-- VINS (validated list) -->
     <section id="vins" class="section">
       <h2>Vins & Champagnes <span class="en">Wines & Champagne</span></h2>
 
-      <h3 class="subhead">Vins rouges (bouteille 75cl) <span class="en">Red wines (75cl)</span></h3>
-      <article class="item"><div class="left"><h3>Bordeaux AOP Château Roquefort</h3></div><div class="right">26,0</div></article>
-      <article class="item"><div class="left"><h3>IGP Pays d’Oc</h3></div><div class="right">26,0</div></article>
-      <article class="item"><div class="left"><h3>Pinot noir “Le Versant”, Fontcalieu</h3><p class="en">Pinot noir (Le Versant), Fontcalieu</p><p class="meta">Prix non indiqué sur TheFork / price not listed</p></div><div class="right">—</div></article>
-      <article class="item"><div class="left"><h3>Bourgueil AOC</h3><p class="meta">Catherine et Pierre Breton « Trinch »</p></div><div class="right">35,0</div></article>
-      <article class="item"><div class="left"><h3>Saint Nicolas de Bourgueuil</h3><p class="meta">Domaine de la Cotelleraie, Le Vau Jaumier</p></div><div class="right">39,0</div></article>
+      <h3 class="subhead">Vins rouges <span class="en">Red wines</span></h3>
+      <article class="item"><div class="left"><h3>Bordeaux AOP — Château Roquefort</h3><p class="meta">15cl / 46cl / 75cl</p></div><div class="right">5,50 · 16,50 · 26,00</div></article>
+      <article class="item"><div class="left"><h3>IGP Pays d’Oc Pinot noir — “Le Versant” (Fontcalieu)</h3><p class="meta">15cl / 46cl / 75cl</p></div><div class="right">5,50 · 16,50 · 26,00</div></article>
+      <article class="item"><div class="left"><h3>Bourgueil AOC</h3><p class="meta">Catherine & Pierre Breton “Trinch” · 15cl / 46cl / 75cl</p></div><div class="right">7,50 · 22,50 · 35,00</div></article>
+      <article class="item"><div class="left"><h3>Saint-Nicolas-de-Bourgueil</h3><p class="meta">Domaine de la Cotelleraie — Le Vau Jaumier · 75cl</p></div><div class="right">39,00</div></article>
 
-      <h3 class="subhead">Vins blancs (bouteille 75cl) <span class="en">White wines (75cl)</span></h3>
-      <article class="item"><div class="left"><h3>IGP Pays d’Oc Chardonnay, Ecoterra BIO</h3></div><div class="right">25,0</div></article>
-      <article class="item"><div class="left"><h3>IGP Pays d’Oc</h3></div><div class="right">27,0</div></article>
-      <article class="item"><div class="left"><h3>Viognier “Le Versant” Fontcalieu</h3><p class="meta">Prix non indiqué sur TheFork / price not listed</p></div><div class="right">—</div></article>
-      <article class="item"><div class="left"><h3>Montagny AOP Millebuis</h3></div><div class="right">33,0</div></article>
+      <h3 class="subhead">Vins blancs <span class="en">White wines</span></h3>
+      <article class="item"><div class="left"><h3>IGP Pays d’Oc Chardonnay — Ecoterra BIO</h3><p class="meta">15cl / 46cl / 75cl</p></div><div class="right">5,00 · 15,00 · 25,00</div></article>
+      <article class="item"><div class="left"><h3>IGP Pays d’Oc Viognier — “Le Versant” (Fontcalieu)</h3><p class="meta">15cl / 46cl / 75cl</p></div><div class="right">5,50 · 16,50 · 27,00</div></article>
+      <article class="item"><div class="left"><h3>Montagny AOP — Millebuis</h3><p class="meta">75cl</p></div><div class="right">33,00</div></article>
 
-      <h3 class="subhead">Vins rosés (bouteille 75cl) <span class="en">Rosé wines (75cl)</span></h3>
-      <article class="item"><div class="left"><h3>IGP Méditerranée Ponton n°7</h3></div><div class="right">23,0</div></article>
-      <article class="item"><div class="left"><h3>Coteaux d’Aix en Provence AOP</h3><p class="meta">Domaine Saint‑Julien les Vignes BIO</p><p class="meta">Prix non indiqué sur TheFork / price not listed</p></div><div class="right">—</div></article>
-      <article class="item"><div class="left"><h3>Côtes de Provence AOP Miraval</h3></div><div class="right">44,0</div></article>
+      <h3 class="subhead">Vins rosés <span class="en">Rosé wines</span></h3>
+      <article class="item"><div class="left"><h3>IGP Méditerranée — Ponton n°7</h3><p class="meta">15cl / 46cl / 75cl</p></div><div class="right">4,50 · 13,50 · 23,00</div></article>
+      <article class="item"><div class="left"><h3>Coteaux d’Aix-en-Provence AOP</h3><p class="meta">Domaine Saint-Julien les Vignes BIO · 15cl / 46cl / 75cl</p></div><div class="right">5,50 · 16,50 · 27,00</div></article>
+      <article class="item"><div class="left"><h3>Côtes de Provence AOP — Miraval</h3><p class="meta">15cl / 46cl / 75cl</p></div><div class="right">8,50 · 25,00 · 44,00</div></article>
 
-      <h3 class="subhead">Champagnes (bouteille 75cl) <span class="en">Champagne (75cl)</span></h3>
-      <article class="item"><div class="left"><h3>Paul Laurent Brut</h3></div><div class="right">62,0</div></article>
-      <article class="item"><div class="left"><h3>Champagne extra brut</h3><p class="meta">« Terre de Meunier » Domaine Dehours</p></div><div class="right">78,0</div></article>
+      <h3 class="subhead">Champagnes <span class="en">Champagne</span></h3>
+      <article class="item"><div class="left"><h3>Paul Laurent Brut</h3><p class="meta">Coupe 12cl / Bouteille 75cl</p></div><div class="right">11,0 · 62,0</div></article>
+      <article class="item"><div class="left"><h3>Champagne extra brut</h3><p class="meta">“Terre de Meunier” — Domaine Dehours · 75cl</p></div><div class="right">78,0</div></article>
     </section>
 
     <!-- INFOS -->
@@ -297,11 +269,11 @@
       <h2>Infos</h2>
       <p class="muted">
         Prix net en euros. Les chèques ne sont pas acceptés. CB minimum 5 euros.<br>
-        <em>Net prices in euros. Cheques not accepted. Card minimum 5€.</em>
+        <span class="en"><em>Net prices in euros. Cheques not accepted. Card minimum 5€.</em></span>
       </p>
       <p class="muted small">
         L’abus d’alcool est dangereux pour la santé, à consommer avec modération.<br>
-        <em>Alcohol abuse is dangerous for your health — drink responsibly.</em>
+        <span class="en"><em>Alcohol abuse is dangerous for your health — drink responsibly.</em></span>
       </p>
     </section>
 
@@ -310,5 +282,30 @@
   <footer class="bottom">
     <a class="to-top" href="#top" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">Haut de page · Top</a>
   </footer>
+
+  <script>
+  (function(){
+    const root = document.body;
+    const buttons = Array.from(document.querySelectorAll('[data-set-lang]'));
+
+    function applyLang(lang){
+      root.setAttribute('data-lang', lang);
+      try { localStorage.setItem('germinal_lang', lang); } catch(e) {}
+      buttons.forEach(b => b.classList.toggle('active', b.dataset.setLang === lang));
+      // Accessibility: update html lang when FR-only (still fine for both)
+      document.documentElement.lang = 'fr';
+    }
+
+    const saved = (() => {
+      try { return localStorage.getItem('germinal_lang'); } catch(e) { return null; }
+    })();
+
+    applyLang(saved || 'both');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => applyLang(btn.dataset.setLang));
+    });
+  })();
+  </script>
 </body>
 </html>
