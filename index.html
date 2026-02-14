@@ -4,90 +4,105 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Le Germinal – Menu</title>
-<link rel="stylesheet" href="style.css">
-</head>
 
+<style>
+body{font-family:Arial,sans-serif;background:#f8f8f8;padding:20px;margin:0}
+.topbar{display:flex;justify-content:space-between;align-items:center}
+.langbtn{padding:6px 12px;border-radius:20px;border:none;cursor:pointer;margin-left:5px}
+.langbtn.active{background:#000;color:#fff}
+.section-title{margin-top:35px;font-size:22px;border-bottom:2px solid #ddd;padding-bottom:5px}
+.menu-list{list-style:none;padding:0}
+.menu-list li{background:#fff;margin:8px 0;padding:12px;border-radius:10px;position:relative}
+.menu-list li::after{content:attr(data-price);position:absolute;right:15px;top:12px;font-weight:bold}
+.en{display:none}
+body.lang-en .fr{display:none}
+body.lang-en .en{display:inline}
+.wine-table{margin-top:15px;background:#fff;border-radius:12px;overflow:hidden}
+.wine-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;padding:12px;border-bottom:1px solid #eee}
+.wine-row.head{font-weight:bold;background:#f5f5f5}
+.wine-row:last-child{border-bottom:none}
+</style>
+
+</head>
 <body>
 
 <div class="topbar">
   <h1>Le Germinal</h1>
-  <div class="langswitch">
+  <div>
     <button class="langbtn active" data-lang="fr">FR</button>
     <button class="langbtn" data-lang="en">EN</button>
   </div>
 </div>
 
-<!-- ================= FOOD ================= -->
-
-<h2 class="section-title">
-  <span class="fr">Entrées</span>
-  <span class="en">Starters</span>
-</h2>
-
+<!-- ================= ENTRÉES ================= -->
+<h2 class="section-title"><span class="fr">Entrées</span><span class="en">Starters</span></h2>
 <ul class="menu-list">
-  <li data-price="6 €"><span class="fr">Œufs poché, purée de patate douce</span><span class="en">Poached eggs, sweet potato purée</span></li>
-  <li data-price="7,5 €"><span class="fr">Terrine du moment, pickles d’oignons rouges</span><span class="en">Homemade terrine, pickled red onions</span></li>
-  <li data-price="8,5 €"><span class="fr">Crumble d’aubergine au parmesan et roquette</span><span class="en">Eggplant crumble with parmesan and arugula</span></li>
-  <li data-price="7,5 €"><span class="fr">Samoussa poulet, pommes de terre et curry</span><span class="en">Chicken samosa with potatoes and curry</span></li>
-  <li data-price="8 €"><span class="fr">Soupe à l’oignon</span><span class="en">French onion soup</span></li>
-  <li data-price="8 €"><span class="fr">Escargots de Bourgogne x6</span><span class="en">Burgundy snails x6</span></li>
-  <li data-price="9,5 €"><span class="fr">Ravioles du Royans à la crème de parmesan</span><span class="en">Ravioli with parmesan cream</span></li>
+<li data-price="6 €"><span class="fr">Œufs pochés, purée de patate douce</span><span class="en">Poached eggs, sweet potato purée</span></li>
+<li data-price="7,5 €"><span class="fr">Terrine du moment, pickles d’oignons rouges</span><span class="en">Homemade terrine, pickled red onions</span></li>
+<li data-price="8,5 €"><span class="fr">Crumble d’aubergine au parmesan et roquette</span><span class="en">Eggplant crumble with parmesan and arugula</span></li>
+<li data-price="7,5 €"><span class="fr">Samoussa poulet, pommes de terre et curry</span><span class="en">Chicken samosa with potatoes and curry</span></li>
+<li data-price="8 €"><span class="fr">Soupe à l’oignon</span><span class="en">French onion soup</span></li>
+<li data-price="8 €"><span class="fr">Escargots de Bourgogne x6</span><span class="en">Burgundy snails x6</span></li>
+<li data-price="9,5 €"><span class="fr">Ravioles du Royans à la crème de parmesan</span><span class="en">Ravioli with parmesan cream</span></li>
 </ul>
 
-<h2 class="section-title">
-  <span class="fr">Plats</span>
-  <span class="en">Main Dishes</span>
-</h2>
-
+<!-- ================= PLATS ================= -->
+<h2 class="section-title"><span class="fr">Plats</span><span class="en">Main Dishes</span></h2>
 <ul class="menu-list">
-  <li data-price="17,5 €"><span class="fr">Pièce du boucher, sauce au poivre vert, frites</span><span class="en">Butcher’s cut, green pepper sauce, fries</span></li>
-  <li data-price="16,5 €"><span class="fr">Bœuf bourguignon, purée</span><span class="en">Beef bourguignon, mashed potatoes</span></li>
-  <li data-price="13,5 €"><span class="fr">Fish and chips</span><span class="en">Fish & chips</span></li>
-  <li data-price="17,5 €"><span class="fr">Burger du point G, frites maison</span><span class="en">Chef’s burger, homemade fries</span></li>
-  <li data-price="17,5 €"><span class="fr">Burger de pulled pork</span><span class="en">Pulled pork burger</span></li>
-  <li data-price="16 €"><span class="fr">Tartare de bœuf traditionnel, frites maison</span><span class="en">Traditional beef tartare, homemade fries</span></li>
-  <li data-price="14,5 €"><span class="fr">Camembert rôti au miel et thym, frites, salade</span><span class="en">Baked camembert with honey, fries, salad</span></li>
-  <li data-price="15,5 €"><span class="fr">Poulet rôti du chef, sauce du chef et frites</span><span class="en">Roast chicken, chef’s sauce, fries</span></li>
-  <li data-price="18,5 €"><span class="fr">Blanquette de veau, riz basmati</span><span class="en">Veal stew, basmati rice</span></li>
-  <li data-price="22,5 €"><span class="fr">Pavé de saumon, ratatouille à la provençale</span><span class="en">Salmon steak with ratatouille</span></li>
-  <li data-price="15,5 €"><span class="fr">Penne à la crème de pecorino et aubergine napolitaine</span><span class="en">Penne with pecorino cream and eggplant</span></li>
-  <li data-price="17 €"><span class="fr">Penne à la crème de truffe, noisettes torréfiées</span><span class="en">Truffle cream penne</span></li>
-  <li data-price="16,5 €"><span class="fr">Risotto aux champignons et poulet croustillant</span><span class="en">Mushroom risotto with crispy chicken</span></li>
-  <li data-price="15,9 €"><span class="fr">Salade César</span><span class="en">Caesar salad</span></li>
-  <li data-price="15,9 €"><span class="fr">Salade de saison, poulet mariné pané au panko</span><span class="en">Seasonal salad with panko chicken</span></li>
-  <li data-price="15,5 €"><span class="fr">Assiette végétarienne</span><span class="en">Vegetarian plate</span></li>
-  <li data-price="4 €"><span class="fr">Garniture — frites / purée / salade</span><span class="en">Side — fries / mash / salad</span></li>
-  <li data-price="6 €"><span class="fr">Garniture ratatouille</span><span class="en">Side ratatouille</span></li>
+<li data-price="17,5 €"><span class="fr">Pièce du boucher, sauce au poivre vert, frites</span><span class="en">Butcher’s cut, green pepper sauce, fries</span></li>
+<li data-price="16,5 €"><span class="fr">Bœuf bourguignon, purée</span><span class="en">Beef bourguignon, mashed potatoes</span></li>
+<li data-price="13,5 €"><span class="fr">Fish and chips</span><span class="en">Fish & chips</span></li>
+<li data-price="17,5 €"><span class="fr">Burger du point G, frites maison</span><span class="en">Chef’s burger, homemade fries</span></li>
+<li data-price="17,5 €"><span class="fr">Burger de pulled pork</span><span class="en">Pulled pork burger</span></li>
+<li data-price="16 €"><span class="fr">Tartare de bœuf traditionnel, frites maison</span><span class="en">Traditional beef tartare</span></li>
+<li data-price="14,5 €"><span class="fr">Camembert rôti au miel et thym</span><span class="en">Baked camembert with honey</span></li>
+<li data-price="15,5 €"><span class="fr">Poulet rôti du chef</span><span class="en">Roast chicken</span></li>
+<li data-price="18,5 €"><span class="fr">Blanquette de veau</span><span class="en">Veal stew</span></li>
+<li data-price="22,5 €"><span class="fr">Pavé de saumon</span><span class="en">Salmon steak</span></li>
+<li data-price="15,5 €"><span class="fr">Penne pecorino</span><span class="en">Penne with pecorino</span></li>
+<li data-price="17 €"><span class="fr">Penne truffe</span><span class="en">Truffle penne</span></li>
+<li data-price="16,5 €"><span class="fr">Risotto champignons</span><span class="en">Mushroom risotto</span></li>
+<li data-price="15,9 €"><span class="fr">Salade César</span><span class="en">Caesar salad</span></li>
+<li data-price="15,5 €"><span class="fr">Assiette végétarienne</span><span class="en">Vegetarian plate</span></li>
 </ul>
 
-<h2 class="section-title">
-  <span class="fr">Desserts</span>
-  <span class="en">Desserts</span>
-</h2>
-
+<!-- ================= DESSERTS ================= -->
+<h2 class="section-title"><span class="fr">Desserts</span><span class="en">Desserts</span></h2>
 <ul class="menu-list">
-  <li data-price="10 €"><span class="fr">Banofee revisité du chef</span><span class="en">Chef’s banoffee</span></li>
-  <li data-price="8,5 €"><span class="fr">Crème brûlée vanille de Madagascar</span><span class="en">Crème brûlée</span></li>
-  <li data-price="8,5 €"><span class="fr">Cheesecake poire et noisettes torréfiées</span><span class="en">Pear & hazelnut cheesecake</span></li>
-  <li data-price="7,5 €"><span class="fr">Crumble du moment</span><span class="en">Crumble of the day</span></li>
-  <li data-price="8,5 €"><span class="fr">Moelleux au chocolat</span><span class="en">Chocolate fondant</span></li>
-  <li data-price="7,5 €"><span class="fr">Dessert du moment</span><span class="en">Dessert of the day</span></li>
-  <li data-price="9,5 €"><span class="fr">Café gourmand</span><span class="en">Coffee gourmet</span></li>
+<li data-price="10 €"><span class="fr">Banofee revisité</span><span class="en">Chef’s banoffee</span></li>
+<li data-price="8,5 €"><span class="fr">Crème brûlée</span><span class="en">Crème brûlée</span></li>
+<li data-price="8,5 €"><span class="fr">Cheesecake poire</span><span class="en">Pear cheesecake</span></li>
+<li data-price="7,5 €"><span class="fr">Crumble du moment</span><span class="en">Crumble of the day</span></li>
+<li data-price="8,5 €"><span class="fr">Moelleux chocolat</span><span class="en">Chocolate fondant</span></li>
+<li data-price="9,5 €"><span class="fr">Café gourmand</span><span class="en">Coffee gourmet</span></li>
 </ul>
 
-<h2 class="section-title">
-  <span class="fr">Boissons</span>
-  <span class="en">Drinks</span>
-</h2>
+<!-- ================= VINS ================= -->
+<h2 class="section-title"><span class="fr">Vins</span><span class="en">Wines</span></h2>
 
-<ul class="menu-list">
-  <li data-price="4,5 €"><span class="fr">Coca-cola / Coca zéro 33 cl</span><span class="en">Coca-cola / Coke Zero 33 cl</span></li>
-  <li data-price="5 €"><span class="fr">Ginger beer 25 cl</span><span class="en">Ginger beer 25 cl</span></li>
-  <li data-price="5 €"><span class="fr">Evian plate 50 cl</span><span class="en">Evian still water 50 cl</span></li>
-  <li data-price="2,4 €"><span class="fr">Expresso</span><span class="en">Espresso</span></li>
-  <li data-price="9,5 €"><span class="fr">Cocktails classiques</span><span class="en">Classic cocktails</span></li>
-</ul>
+<div class="wine-table">
+<div class="wine-row head">
+<div><span class="fr">Vin</span><span class="en">Wine</span></div>
+<div>15cl</div><div>46cl</div><div>75cl</div>
+</div>
 
-<script src="script.js"></script>
+<div class="wine-row"><div>Bordeaux AOP – Château Roquefort</div><div>5,50</div><div>16,50</div><div>26,00</div></div>
+<div class="wine-row"><div>Pinot Noir – Le Versant</div><div>5,50</div><div>16,50</div><div>26,00</div></div>
+<div class="wine-row"><div>Bourgueil AOC – Breton</div><div>7,50</div><div>22,50</div><div>35,00</div></div>
+<div class="wine-row"><div>Saint Nicolas de Bourgueil</div><div>-</div><div>-</div><div>39,00</div></div>
+</div>
+
+<script>
+const buttons=document.querySelectorAll(".langbtn");
+buttons.forEach(btn=>{
+btn.addEventListener("click",()=>{
+buttons.forEach(b=>b.classList.remove("active"));
+btn.classList.add("active");
+const lang=btn.dataset.lang;
+document.body.classList.toggle("lang-en",lang==="en");
+});
+});
+</script>
+
 </body>
 </html>
