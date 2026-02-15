@@ -142,3 +142,12 @@ body[data-lang="fr"] .en{ display:none !important; }
   .top-row{ align-items:center; }
   .lang-btn{ padding:7px 9px; }
 }
+.event-button{
+  display:inline-block;
+  padding:10px 15px;
+  background:#000;
+  color:#fff;
+  border-radius:8px;
+  text-decoration:none;
+  margin-top:10px;
+}
